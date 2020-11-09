@@ -16,7 +16,8 @@ def current_system_path():
     print("this is your current directory")
     return sys.path
 
-print(current_system_path()) ```
+print(current_system_path()) 
+```
 
 ### What is pip
 - package manager for python and helps us install external packages
