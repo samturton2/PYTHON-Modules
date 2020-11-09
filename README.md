@@ -29,3 +29,13 @@ such as requests
 
 ![](/CRUD.png)
 
+
+## Json basics
+- Java script object notation
+- use cases - browser data
+- data is in key value pairs
+- Json encoding from a Dictionary
+- Json decoding into a Dictionary
+- handling/creating files with python
+- writing to file
+- reading from file
