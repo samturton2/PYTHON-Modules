@@ -22,3 +22,8 @@ print(current_system_path()) ```
 - package manager for python and helps us install external packages
 such as requests
 - syntax: pip install name_of_package
+
+
+### API with requests
+
+![](/CRUD.png)
