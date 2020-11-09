@@ -39,3 +39,14 @@ such as requests
 - handling/creating files with python
 - writing to file
 - reading from file
+
+
+#### Exception handling
+syntax 
+```python
+try: # If no error occurs
+    raise: # can raise an error of your choice in the raise section
+except: # Except when this error occurs (can specify
+else: # Occurs if no errors raised
+finally: # always happens no matter what
+```

@@ -16,16 +16,16 @@ def long_and_lat():
     l_resp = requests.get("https://api.postcodes.io/postcodes/" + postcode)
 
     # check the status code, to see if webpage is found
-    if l_resp.status_code == requests.codes.ok:
-        result = l_resp.json()['result']  # Convert to a python dictionary and retrieve the results dictionary
-        longitude = result['longitude']
-        latitude = result["latitude"]
-        # return the longitude and latitude from the dictionary
-        return f"longitude: {longitude}, latitude: {latitude}"
-    elif l_resp.status_code == requests.codes.not_found:  # This checks for if not 200-400 status code
-        print("This site is unavailable until further notice.")
-    else:
+    try:
+        if l_resp.status_code == requests.codes.ok:
+            result = l_resp.json()['result']  # Convert to a python dictionary and retrieve the results dictionary
+            longitude = result['longitude']
+            latitude = result["latitude"]
+            # return the longitude and latitude from the dictionary
+            return f"longitude: {longitude}, latitude: {latitude}"
+        elif l_resp.status_code == requests.codes.not_found:  # This checks for if not 200-400 status code
+            print("This site is unavailable until further notice.")
+    except:
         print("OOPs something went wrong please try later")
-
 
 print(long_and_lat())
