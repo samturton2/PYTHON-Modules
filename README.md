@@ -55,7 +55,7 @@ finally: # always happens no matter what
 - we use these blocks when we expect an error or an exception from python interpreter
 - why - this helps us handle the `errors` or `exception` and add customised message as awell as a make a decision based on the customer needs.
 
-
+- We will create a variable to store a file using ```open()```
 **iteration 1**
 ```python
 try: # lets use try block for a 1 line of code where we know this will throw an error
