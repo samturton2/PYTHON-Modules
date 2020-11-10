@@ -50,3 +50,27 @@ except: # Except when this error occurs (can specify
 else: # Occurs if no errors raised
 finally: # always happens no matter what
 ```
+
+- **use cases**
+- we use these blocks when we expect an error or an exception from python interpreter
+- why - this helps us handle the `errors` or `exception` and add customised message as awell as a make a decision based on the customer needs.
+
+
+**iteration 1**
+```python
+try: # lets use try block for a 1 line of code where we know this will throw an error
+    file = open("orders.text")
+except:
+    print("Panic alert !! ")
+```
+**Iteration 2 using `raise` and `finally`**
+```python
+try:
+    file = open("orders.text")
+except FileNotFoundError as errmsg: # creating alias for file not found error
+    print("please create a file first.  " + str(errmsg))
+# if we still wanted them to see the actual exception
+    raise # will send back the actual exception
+finally: #finally will execute regardless of above conditions
+    print("Hope you had a good customer experience")
+```
